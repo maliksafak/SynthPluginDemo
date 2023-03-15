@@ -1,5 +1,8 @@
 #pragma once
 
+#include <JuceHeader.h>
+#include <Generator.h>
+#include <DDS.h>
 
 //==============================================================================
 class AudioPlugin  : public AudioProcessor
@@ -51,7 +54,10 @@ public:
 
 private:
     //==============================================================================
-    AudioParameterFloat* gain;
+    AudioParameterFloat* frequency;
+    AudioParameterFloat* amplitude;
+    AudioParameterFloat* quality;
+    DDS* dds;
 
     //==============================================================================
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (AudioPlugin)
